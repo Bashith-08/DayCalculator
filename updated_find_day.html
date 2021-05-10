@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <title>finding day</title>
+        <h1 class="first" ;><b>DAY CALCULATOR</b></h1> 
+       
+      <style>
+
+        h1.first{
+
+          background-color: grey;
+          padding: 10px;
+          border-color: black;
+          border-style: ridge;
+           margin :20px;
+         margin-left: 200px;
+         margin-right: 260px;
+         margin-top: 70px;
+         margin-bottom:0.5px;
+         font-style: bold;
+         text-align: center;
+
+        }
+        h1.first:hover{
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        
+     
+      body{
+
+        background-color:#02075d;
+        background-image:linear-gradient(
+      to bottom,
+      rgba(0, 0, 110, 0.5),
+      rgb(1, 0, 87)
+    ), url('https://blog.drupa.com/wp-content/uploads/2015/11/Calendar-1000x605.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+
+       }
+       form{
+        padding-top:20px;
+        background-color: #FFC0CB;
+        color :solid;
+         padding :20px ;
+         padding-top:0.2px;
+         border-color: #4B0082;
+         border-width:20px;
+         border-style:inset;
+         margin :20px;
+         margin-left: 200px;
+         margin-right: 260px;
+         margin-top: 0.5px;
+         font-family: arial;
+        
+       }
+      button{
+          line-height: 20px;
+          font-size: 15px;
+          border-radius:8px;
+          transition-duration:0.4s;
+       }
+       button:hover{
+          background-color: grey;
+          color :white;
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       form:hover{
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       input:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       input{
+        border-radius: 5px;
+       }
+       
+
+     </style>
+      
+  </head>
+  <body>
+  <form name="formcalc">
+  <h1 class="third"><br/>CAUTION!!!<br/>Year should be in between '1600-2099'</h1>  
+    
+    DATE  : <input type="text" id="text1" placeholder="Enter date 'dd' ">
+    <br><br>
+    MONTH : <input type="text" id="text2" placeholder="Enter month 'mm' ">
+    <br><br>
+    YEAR  : <input type="text" id="text3" placeholder="Enter year 'yyyy' ">
+    <br><br><br>
+    <input type="reset" name="reset" value="Reset">
+    <br><br>
+    <button type="button" onclick= "fn1()" id="btn1">click here</button>
+    <br><br>
+    <div id="counting1">DAY  :- </div>    
+  </form>
+
+    <script type="text/javascript">
+
+        function fn1()
+          {
+            var date,month,year,day_code;
+            var varible;
+            date=Number(document.formcalc.text1.value);
+            month=Number(document.formcalc.text2.value);
+            year=Number(document.formcalc.text3.value);
+
+        var month_code;
+        var year_code;
+    if(month==1)
+    {
+     month_code=0;
+    }else if(month==2)
+    {
+     month_code=3;
+    }else if(month==3)
+    {
+     month_code=3;
+    }else if(month==4)
+    {
+     month_code=6;
+    }else if(month==5)
+    {
+     month_code=1;
+    }else if(month==6)
+    {
+     month_code=4;
+    }else if(month==7)
+    {
+     month_code=6;
+    }else if(month==8)
+    {
+     month_code=2;
+    }else if(month==9)
+    {
+     month_code=5;
+    }else if(month==10)
+    {
+     month_code=0;
+    }
+    else if(month==11)
+    {
+     month_code=3;
+    }else
+    {
+     month_code=5;
+    }
+    if(year>=1600&&year<=1699)
+    {
+     year_code=6;
+    }else if(year>=1700&&year<=1799)
+    {
+     year_code=4;
+    }else if(year>=1800&&year<=1899)
+    {
+     year_code=2;
+    }else if(year>=1900&&year<=1999)
+    {
+     year_code=0;
+    }else if(year>=2000&&year<=2099)
+    {
+     year_code=6;
+    }
+     var last_two_digit=year%100;
+     var divisible_by_four=parseInt(last_two_digit/4);
+     var sum=last_two_digit+divisible_by_four+date+month_code+year_code;
+     var day_code=sum%7;
+     if(year<=2099&&year>=1600)
+     {
+
+     if(year/4!=0)
+    {
+    day_code=day_code+0;
+    }
+    if(year/4==0)
+    {
+    day_code=day_code-1;
+    }
+   
+    if(day_code==0)
+      {
+       
+       varible="SUNDAY";
+      }
+    else if(day_code==1)
+      {
+      varible= "monday";
+      }
+    else if(day_code==2)
+      {
+      varible= "TUESDAY";
+      }
+    else if(day_code==3)
+      {
+       varible= "WEDNESDAY";
+      }
+    else if(day_code==4)
+      {
+        varible= "THURSDAY";
+      }
+    else if(day_code==5)
+      {
+        varible= "FRIDAY";
+      }
+    else if(day_code==6)
+      {
+        varible="SATURDAY";
+      }
+  }
+  else
+  {
+    varible= "please enter the details corectly";
+  }
+  document.getElementById("counting1").innerHTML= "DAY  :"+varible;
+  }
+  
+</script>
+
+
+
+       
+
+  </body>
+</html>
