@@ -1,0 +1,70 @@
+ h1.first{
+
+          background-color: grey;
+          padding: 10px;
+          border-color: black;
+          border-style: ridge;
+           margin :20px;
+         margin-left: 200px;
+         margin-right: 260px;
+         margin-top: 70px;
+         margin-bottom:0.5px;
+         font-style: bold;
+         text-align: center;
+
+        }
+        h1.first:hover{
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        
+     
+      body{
+
+        background-color:#02075d;
+        background-image:linear-gradient(
+      to bottom,
+      rgba(0, 0, 110, 0.5),
+      rgb(1, 0, 87)
+    ), url('https://blog.drupa.com/wp-content/uploads/2015/11/Calendar-1000x605.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+
+
+       }
+       form{
+        padding-top:20px;
+        background-color: #FFC0CB;
+        color :solid;
+         padding :20px ;
+         padding-top:0.2px;
+         border-color: #4B0082;
+         border-width:20px;
+         border-style:inset;
+         margin :20px;
+         margin-left: 200px;
+         margin-right: 260px;
+         margin-top: 0.5px;
+         font-family: arial;
+        
+       }
+      button{
+          line-height: 20px;
+          font-size: 15px;
+          border-radius:8px;
+          transition-duration:0.4s;
+       }
+       button:hover{
+          background-color: grey;
+          color :white;
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       form:hover{
+          box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       input:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+       }
+       input{
+        border-radius: 5px;
+       }
